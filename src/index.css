@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1B4332;
+  --color-secondary: #F8F9FA;
+  --color-accent: #FFB703;
+  --color-nature: #40916C;
+  
+  --font-display: "Outfit", sans-serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-slate-900 font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold tracking-tight;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap');
+
+.glass-nav {
+  @apply bg-white/80 backdrop-blur-md border-b border-gray-100;
+}
+
+.organic-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z' fill='%232F6F3E' fill-opacity='0.03'/%3E%3C/svg%3E");
+}
+
+.leaf-icon {
+  @apply text-primary;
+}
+
+.btn-primary {
+  @apply bg-primary text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-primary/90 hover:shadow-lg active:scale-95;
+}
+
+.btn-outline {
+  @apply border-2 border-primary text-primary px-8 py-3 rounded-full font-medium transition-all hover:bg-primary hover:text-white active:scale-95;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
+}
+
+.section-padding {
+  @apply py-20 px-6 md:px-12 lg:px-24;
+}
